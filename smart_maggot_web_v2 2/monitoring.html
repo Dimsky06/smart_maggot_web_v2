@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monitoring | Smart Maggot Farming</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="side-nav">
+      <div class="side-brand">
+        <div class="brand-badge">SMF</div>
+        <div>
+          <strong>Smart Maggot</strong>
+          <small>Farming Platform</small>
+        </div>
+      </div>
+      <nav class="menu">
+        <a href="dashboard.html">Overview</a>
+        <a class="active" href="monitoring.html">Monitoring</a>
+        <a href="edukasi.html">Edukasi</a>
+        <a href="laporan.html">Laporan</a>
+        <a href="index.html">Keluar</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="hero compact">
+        <div>
+          <span class="eyebrow">Monitoring Center</span>
+          <h1>Data Sensor Harian</h1>
+          <p>Tampilan dipisah agar operator lebih fokus saat membaca data lingkungan kandang.</p>
+        </div>
+        <button class="ghost-btn" onclick="simulateNewData()">Tambah Simulasi</button>
+      </header>
+
+      <section class="dual-grid">
+        <article class="panel-card">
+          <div class="panel-head">
+            <div>
+              <h2>Grafik Suhu</h2>
+              <p>Parameter utama budidaya</p>
+            </div>
+          </div>
+          <canvas id="tempChart" height="150"></canvas>
+        </article>
+
+        <article class="panel-card">
+          <div class="panel-head">
+            <div>
+              <h2>Grafik Kelembaban</h2>
+              <p>Kondisi kelembaban kandang</p>
+            </div>
+          </div>
+          <canvas id="humidityChart" height="150"></canvas>
+        </article>
+      </section>
+
+      <article class="panel-card">
+        <div class="panel-head">
+          <div>
+            <h2>Riwayat Pembacaan Sensor</h2>
+            <p>Siap dihubungkan ke data real-time dari perangkat IoT.</p>
+          </div>
+          <label class="table-filter">
+            Pilih Tanggal
+            <input type="date" value="2026-06-02">
+          </label>
+        </div>
+        <div class="table-box">
+          <table>
+            <thead>
+              <tr>
+                <th>Waktu</th>
+                <th>Suhu</th>
+                <th>Kelembaban</th>
+                <th>Status</th>
+                <th>Device ID</th>
+              </tr>
+            </thead>
+            <tbody id="sensorTable"></tbody>
+          </table>
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/charts.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

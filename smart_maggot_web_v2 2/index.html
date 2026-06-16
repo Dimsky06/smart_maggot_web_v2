@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Maggot Farming</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="auth-body">
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <main class="auth-shell">
+    <section class="auth-copy">
+      <div class="eyebrow">Smart Maggot Farming Platform</div>
+
+      <h1>
+        Monitoring budidaya maggot yang modern, rapi,
+        dan nyaman digunakan.
+      </h1>
+
+      <p class="auth-description">
+        Platform ini dirancang untuk membantu proses monitoring budidaya maggot
+        secara lebih terstruktur, mulai dari suhu, kelembaban, produksi, hingga
+        laporan dan edukasi. Tampilannya dibuat lebih profesional, ringan,
+        dan tetap relevan untuk kebutuhan sekolah maupun implementasi IoT.
+      </p>
+
+      <div class="feature-stack">
+        <div class="feature-pill">Monitoring Sensor</div>
+        <div class="feature-pill">Data Produksi</div>
+        <div class="feature-pill">Modul Edukasi</div>
+        <div class="feature-pill">Laporan Mingguan</div>
+      </div>
+
+      <div class="preview-card">
+        <div class="preview-top">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+
+        <div class="preview-header">
+          <div>
+            <small class="preview-label">Live Overview</small>
+            <h3>Smart Maggot Farming</h3>
+          </div>
+          <div class="preview-badge">Online</div>
+        </div>
+
+        <div class="preview-content">
+          <div class="preview-left">
+            <div class="preview-visual">
+              <div class="visual-circle"></div>
+              <div class="visual-card">
+                <span class="mini-label">Produksi Hari Ini</span>
+                <strong>18 kg</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="preview-right">
+            <div class="preview-stat preview-stat-main">
+              <span>Suhu</span>
+              <strong>29°C</strong>
+            </div>
+
+            <div class="preview-stat">
+              <span>Kelembaban</span>
+              <strong>75%</strong>
+            </div>
+
+            <div class="preview-stat">
+              <span>Sampah Masuk</span>
+              <strong>2.3 kg</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="auth-card">
+      <div class="auth-brand">
+        <div class="brand-badge">SMF</div>
+        <div>
+          <h2>Masuk ke Dashboard</h2>
+          <p>Sekolah Alam Indonesia Cibinong</p>
+        </div>
+      </div>
+
+      <form id="loginForm" class="auth-form">
+        <label>
+          Email
+          <input type="email" value="admin@smartmaggot.id" required />
+        </label>
+
+        <label>
+          Password
+          <input type="password" value="admin123" required />
+        </label>
+
+        <button type="submit">Masuk Sekarang</button>
+      </form>
+
+      <div class="auth-divider">
+        <span>Akses demo sistem</span>
+      </div>
+
+      <div class="login-note">
+        <strong>Demo akun</strong><br>
+        admin@smartmaggot.id / admin123
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      window.location.href = "dashboard.html";
+    });
+  </script>
+</body>
+</html>

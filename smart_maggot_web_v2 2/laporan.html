@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laporan | Smart Maggot Farming</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="side-nav">
+      <div class="side-brand">
+        <div class="brand-badge">SMF</div>
+        <div>
+          <strong>Smart Maggot</strong>
+          <small>Farming Platform</small>
+        </div>
+      </div>
+      <nav class="menu">
+        <a href="dashboard.html">Overview</a>
+        <a href="monitoring.html">Monitoring</a>
+        <a href="edukasi.html">Edukasi</a>
+        <a class="active" href="laporan.html">Laporan</a>
+        <a href="index.html">Keluar</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="hero compact">
+        <div>
+          <span class="eyebrow">Weekly Report</span>
+          <h1>Laporan dan Rekap Produksi</h1>
+          <p>Tampilan dirancang lebih bersih untuk presentasi data ke guru, operator, atau mitra sekolah.</p>
+        </div>
+        <div class="hero-actions">
+          <button class="ghost-btn" onclick="window.print()">Cetak PDF</button>
+          <button class="ghost-btn" onclick="downloadCSV()">Unduh CSV</button>
+        </div>
+      </header>
+
+      <section class="report-highlights">
+        <article class="highlight-card">
+          <span>Sampah Masuk</span>
+          <strong>25 kg</strong>
+          <small>Akumulasi minggu ini</small>
+        </article>
+        <article class="highlight-card">
+          <span>Produksi Maggot</span>
+          <strong>18 kg</strong>
+          <small>Output mingguan</small>
+        </article>
+        <article class="highlight-card">
+          <span>Efisiensi</span>
+          <strong>72%</strong>
+          <small>Konversi estimatif</small>
+        </article>
+      </section>
+
+      <section class="dual-grid">
+        <article class="panel-card">
+          <div class="panel-head">
+            <div>
+              <h2>Grafik Perbandingan</h2>
+              <p>Sampah masuk dan hasil produksi.</p>
+            </div>
+          </div>
+          <canvas id="reportChart" height="150"></canvas>
+        </article>
+
+        <article class="panel-card report-note">
+          <div class="panel-head">
+            <div>
+              <h2>Catatan Evaluasi</h2>
+              <p>Ringkasan kondisi operasional</p>
+            </div>
+          </div>
+          <p>
+            Secara umum, suhu dan kelembaban masih dalam rentang aman. Proses pengolahan sampah
+            berjalan cukup stabil, tetapi pemilahan bahan organik perlu dibuat lebih konsisten agar
+            kualitas pakan maggot dan residu tetap baik.
+          </p>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/charts.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

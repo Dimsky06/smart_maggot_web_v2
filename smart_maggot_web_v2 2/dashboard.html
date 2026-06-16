@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Smart Maggot Farming</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="side-nav">
+      <div class="side-brand">
+        <div class="brand-badge">SMF</div>
+        <div>
+          <strong>Smart Maggot</strong>
+          <small>Farming Platform</small>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <a class="active" href="dashboard.html">Overview</a>
+        <a href="monitoring.html">Monitoring</a>
+        <a href="edukasi.html">Edukasi</a>
+        <a href="laporan.html">Laporan</a>
+        <a href="index.html">Keluar</a>
+      </nav>
+
+      <div class="side-card">
+        <p>Status Sistem</p>
+        <strong>Device Online</strong>
+        <span>ESP32 terhubung normal</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="hero">
+        <div>
+          <span class="eyebrow">Overview Dashboard</span>
+          <h1>Smart Maggot Farming</h1>
+          <p>Ringkasan kondisi budidaya, sensor, edukasi, dan performa produksi dalam satu layar.</p>
+        </div>
+        <div class="hero-actions">
+          <button class="ghost-btn">Sinkronisasi</button>
+          <div class="avatar">A</div>
+        </div>
+      </header>
+
+      <section class="stats-grid">
+        <article class="glass-card stat stat-1">
+          <span>Suhu Saat Ini</span>
+          <strong id="tempValue">29°C</strong>
+          <small>Zona ideal kandang</small>
+        </article>
+        <article class="glass-card stat stat-2">
+          <span>Kelembaban</span>
+          <strong id="humValue">75%</strong>
+          <small>Masih stabil</small>
+        </article>
+        <article class="glass-card stat stat-3">
+          <span>Sampah Organik</span>
+          <strong>2.3 kg</strong>
+          <small>Input hari ini</small>
+        </article>
+        <article class="glass-card stat stat-4">
+          <span>Produksi Maggot</span>
+          <strong>18 kg</strong>
+          <small>Rekap mingguan</small>
+        </article>
+      </section>
+
+      <section class="dashboard-flow">
+        <article class="panel-card wide">
+          <div class="panel-head">
+            <div>
+              <h2>Tren Suhu & Kelembaban</h2>
+              <p>Visual yang lebih tenang dan mudah dibaca untuk monitoring harian.</p>
+            </div>
+            <span class="tag">Live Simulation</span>
+          </div>
+          <canvas id="mainChart" height="130"></canvas>
+        </article>
+
+        <article class="panel-card">
+          <div class="panel-head">
+            <div>
+              <h2>Aktivitas Terkini</h2>
+              <p>Pembaruan terakhir sistem</p>
+            </div>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <b>Sensor aktif</b>
+              <span>Data suhu dan kelembaban terbaca normal.</span>
+            </div>
+            <div class="timeline-item">
+              <b>Produksi naik</b>
+              <span>Hasil panen minggu ini menunjukkan tren positif.</span>
+            </div>
+            <div class="timeline-item">
+              <b id="lastUpdate">--:--</b>
+              <span>Waktu sinkronisasi terakhir dashboard.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel-card">
+          <div class="panel-head">
+            <div>
+              <h2>Produksi 7 Hari</h2>
+              <p>Simulasi output maggot</p>
+            </div>
+          </div>
+          <canvas id="productionChart" height="140"></canvas>
+        </article>
+
+        <article class="panel-card">
+          <div class="panel-head">
+            <div>
+              <h2>Ringkasan Device</h2>
+              <p>IoT readiness</p>
+            </div>
+          </div>
+          <ul class="clean-list">
+            <li><span>Device ID</span><b>SMF-001</b></li>
+            <li><span>Sensor Suhu</span><b>Aktif</b></li>
+            <li><span>Sensor Kelembaban</span><b>Aktif</b></li>
+            <li><span>Koneksi</span><b>WiFi Stabil</b></li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/charts.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
